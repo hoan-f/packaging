@@ -1,0 +1,128 @@
+#
+# cgit config
+# see cgitrc(5) for details
+
+# Style and icons
+css=/git/cgit.css
+logo=/git/cgit.png
+favicon=/git/favicon.ico
+
+# Disable caching
+cache-size=0
+
+virtual-root=/git/
+
+# Enable ASCII art commit history graph on the log pages
+enable-commit-graph=1
+
+# Show number of affected files per commit on the log pages
+enable-log-filecount=1
+
+# Show number of added/removed lines per commit on the log pages
+enable-log-linecount=1
+
+# Source code
+enable-tree-linenumbers=0
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.py
+
+# Repositories
+
+repo.url=MsgOrderCheck
+repo.path=/git/MsgOrderCheck.git
+repo.desc=Message Order Check
+repo.readme=master:README.md
+
+repo.url=airportalert
+repo.path=/git/airportalert.git
+repo.desc=AirportAlert with templates
+repo.readme=master:README.md
+
+repo.url=MetMsgExtract
+repo.path=/git/MetMsgExtract.git
+repo.desc=Meteorological Message Extract
+repo.readme=master:README.md
+
+repo.url=PingView
+repo.path=/git/PingView.git
+repo.desc=Ping network connections
+repo.readme=master:README.md
+
+repo.url=taf_filter
+repo.path=/git/taf_filter.git
+repo.desc=Filter out TAF messages
+
+repo.url=cswrf
+repo.path=/git/cswrf.git
+repo.desc=ChangSha WRF forceast
+
+repo.url=sys_admin
+repo.path=/git/sys_admin.git
+repo.desc=System Administration Notes
+
+repo.url=qhz_convert
+repo.path=/git/qhz_convert.git
+repo.desc=Convert Data for "Qi Hou Zhi"
+
+repo.url=pm_help
+repo.path=/git/pm_help.git
+repo.desc=Help Files for "pm" Software
+
+repo.url=report_process
+repo.path=/git/report_process.git
+repo.desc=Process reports
+
+repo.url=doc
+repo.path=/git/doc.git
+repo.desc=Documentation
+
+repo.url=radar2img
+repo.path=/git/radar2img.git
+repo.desc=Python script to convert radar data to image
+
+repo.url=cswrf_exp_201407
+repo.path=/git/cswrf_exp_201407.git
+repo.desc=The 201407 cswrf experiment
+
+repo.url=plot_misc
+repo.path=/git/plot_misc.git
+repo.desc=Misc plot scripts (matplotlib)
+
+repo.url=plot_wm
+repo.path=/git/plot_wm.git
+repo.desc=Plot weather map using NNRP data
+
+repo.url=get_wsi
+repo.path=/git/get_wsi.git
+repo.desc=Download WSI RPM model products
+
+repo.url=cswrf_web
+repo.path=/git/cswrf_web.git
+repo.desc=Changsha WRF forecast web page
+
+repo.url=fetch
+repo.path=/git/fetch.git
+repo.desc=Download online data
+
+repo.url=utils
+repo.path=/git/utils.git
+repo.desc=Custom python utils
+
+repo.url=METParse
+repo.path=/git/METParse.git
+repo.desc=Parse Metar spEci and Taf code
+
+repo.url=ClimateDataProcess
+repo.path=/git/ClimateDataProcess.git
+repo.desc=Convert observation data for climate statistics
+
+repo.url=githooks
+repo.path=/git/githooks.git
+repo.desc=Hooks for git repositories
+
+repo.url=taskmaster
+repo.path=/git/taskmaster.git
+repo.desc=Manage Tasks
+
+repo.url=share_radar
+repo.path=/git/share_radar.git
+repo.desc=Share radar images
