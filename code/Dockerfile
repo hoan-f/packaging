@@ -8,7 +8,7 @@
 
 FROM debian:latest
 
-MAINTAINER jpli "lijpbasin@126.com"
+MAINTAINER Li Jiapeng "lijpbasin@126.com"
 
 # Install SSH server and git, create /var/run/sshd for the SSH daemon
 RUN echo "deb http://mirrors.ustc.edu.cn/debian jessie main contrib non-free" > /etc/apt/sources.list \

@@ -8,7 +8,7 @@
 
 FROM nginx:latest
 
-MAINTAINER jpli "lijpbasin@126.com"
+MAINTAINER Li Jiapeng "lijpbasin@126.com"
 
 # Install
 #   fcgiwrap: Communicate between cgit (CGI) and nginx (FastCGI)
