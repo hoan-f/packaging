@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+# Ikiwiki setup automator -- blog version.
+# 
+# This setup file causes ikiwiki to create a wiki, containing a blog,
+# check it into revision control, generate a setup file for the new
+# wiki, and set everything up.
+
+use IkiWiki::Setup::Standard {
+    wikiname => "Documentation",
+    timeformat => "%F %T %z",
+    srcdir => "/var/lib/ikiwiki/src",
+    destdir => "/var/lib/ikiwiki/target",
+    rcs => "norcs",
+    verbose => 1,
+    add_plugins => [qw{goodstuff pagetemplate}],
+    disable_plugins => [qw{recentchanges openid}],
+    syslog => 0,
+}
