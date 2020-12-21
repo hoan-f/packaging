@@ -5,6 +5,9 @@
 #              -v <repo_dir>:/git:ro \
 #              -v <web_root_dir>:/usr/share/nginx/html:ro \
 #              -d <image>
+#
+# To update git repo list:
+#   docker cp <cgitrepo_file> <container>:/etc/cgitrepos
 
 FROM nginx:latest
 
@@ -17,6 +20,7 @@ RUN echo "deb http://mirrors.ustc.edu.cn/debian jessie main contrib non-free" > 
     && echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y fcgiwrap python-pygments cgit \
+    && touch /etc/cgitrepos \
     && rm -rf /var/lib/apt/lists/*
 
 # Create /git for git repositories
