@@ -1,8 +1,9 @@
 # Generate sphinx html documentation
 #
 # Usage
-#   docker run -v /data/code/src/doc:/var/lib/sphinx/src \
-#              -v /data/web/doc:/var/lib/sphinx/target
+#   docker run -v <doc_src_dir>:/var/lib/sphinx/src \
+#              -v <doc_html_dir>:/var/lib/sphinx/target \
+#              <image>
 
 FROM debian:latest
 

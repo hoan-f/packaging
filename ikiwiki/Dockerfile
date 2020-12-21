@@ -1,8 +1,9 @@
 # Generate ikiwiki static site
 #
 # Usage
-#   docker run -v /data/code/src/doc:/var/lib/ikiwiki/src \
-#              -v /data/web/doc:/var/lib/ikiwiki/target
+#   docker run -v <doc_src_dir>:/var/lib/ikiwiki/src \
+#              -v <doc_html_dir>:/var/lib/ikiwiki/target \
+#              <image>
 
 FROM debian:latest
 

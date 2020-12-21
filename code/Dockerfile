@@ -1,9 +1,9 @@
 # Serve git repositories via the SSH protocol
 #
 # Usage
-#   docker run --name <container> -p 8022:22 \
-#              -v /data/code:/git \
-#              -v /home/git:/home/git \
+#   docker run --name <container> -p <ssh_port>:22 \
+#              -v <repo_dir>:/git \
+#              -v <git_user_dir>:/home/git \
 #              -d <image>
 
 FROM debian:latest

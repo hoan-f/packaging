@@ -1,9 +1,9 @@
 # Serve static html site and git repository (via cgit)
 #
 # Usage
-#   docker run --name <container> -p 80:80 \
-#              -v /data/code:/git:ro \
-#              -v /data/web:/usr/share/nginx/html:ro \
+#   docker run --name <container> -p <http_port>:80 \
+#              -v <repo_dir>:/git:ro \
+#              -v <web_root_dir>:/usr/share/nginx/html:ro \
 #              -d <image>
 
 FROM nginx:latest
