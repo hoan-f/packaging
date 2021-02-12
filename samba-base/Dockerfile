@@ -1,10 +1,5 @@
-# Set up anonymous samba file share service
+# Base image for samba services
 #
-# Usage
-#   docker run --name <container> \
-#              -p 135:135 -p 137-139:137-139 -p 445:445 \
-#              -v <data_dir>:/data/samba \
-#              -d <image>
 
 FROM debian:latest
 
@@ -17,7 +12,3 @@ RUN echo "deb http://mirrors.ustc.edu.cn/debian jessie main contrib non-free" > 
     && apt-get install -y samba
 
 COPY smb.conf /etc/samba/smb.conf
-
-EXPOSE 137/udp 138/udp 139 445
-
-CMD /usr/sbin/nmbd -D && /usr/sbin/smbd -F -S
