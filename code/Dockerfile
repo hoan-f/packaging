@@ -5,6 +5,16 @@
 #              -v <repo_dir>:/git \
 #              -v <git_user_dir>:/home/git \
 #              -d <image>
+#
+# * <git_user_dir> contains home settings for the git user
+#
+#   - .ssh/ with SSH authorization information is required for client
+#     side password free access
+#
+# * <repo_dir> contains all the hosted git repositories
+#
+# * <git_user_dir> and <repo_dir> and all its contents shoud have UID and
+#   GID set to 2001
 
 FROM debian:latest
 
