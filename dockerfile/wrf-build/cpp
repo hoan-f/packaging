@@ -1,0 +1,16 @@
+#!/bin/bash
+
+CPP=/usr/bin/cpp-4.9
+
+argc=1
+argv=("-traditional")
+
+for arg in "$@"
+do
+    [ "$arg" = "-C" ] && continue
+    [ "$arg" = "-traditional" ] && continue
+    argv[$argc]="$arg"
+    let argc=argc+1
+done
+
+exec "$CPP" "${argv[@]}"
