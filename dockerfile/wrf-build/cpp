@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Since gcc-4.8, preprocessing includes <stdc-predef.h> automatically,
+# invoke cpp without "-C" option makes sure C comments be removed, with
+# "-traditional" option, "//" is not treated as comment so that Fortran
+# string concatenation expressions are not broken.
+
 CPP=/usr/bin/cpp-4.9
 
 argc=1
