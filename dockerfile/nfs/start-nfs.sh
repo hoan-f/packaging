@@ -33,10 +33,6 @@ start_monitor() {
     inotifywait -o $LOG_FIFO -m $NFS_ROOT -r &
     INOTIFY_PID=$!
     echo "Started inotifywait in the background"
-    while true; do
-        sleep 1
-        echo >$LOG_FIFO
-    done &
 }
 
 mkdir -p "$OMITDIR"
@@ -45,8 +41,6 @@ start_services
 
 start_monitor
 
-while true; do
-    if read -t 1 line <$LOG_FIFO; then
-        [ "$line" ] && echo "$line"
-    fi
-done
+while read line; do
+    [ "$line" ] && echo "$line"
+done <$LOG_FIFO
