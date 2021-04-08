@@ -15,8 +15,11 @@ nodaemon=true
 logfile=/tmp/supervisord.log
 pidfile=/tmp/supervisord.pid
 
-[program:celery]
+[program:celery-beat]
 command=/usr/bin/celery -A $proj_name beat -s "$schedule_db" --pidfile=/tmp/celerybeat.pid
+
+[program:celery-worker]
+command=/usr/bin/celery -A $proj_name worker -l info --pidfile=/tmp/celeryworker.pid
 EOF
 
 exec /usr/bin/supervisord -c $supervisord_conf
